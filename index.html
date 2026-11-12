@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nosh Next</title>
+<meta name="description" content="Nosh Next finds restaurants that match your taste, near wherever you are. iPhone beta on TestFlight.">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F1F3EE;
+    --card: #FFFFFF;
+    --ink: #1A1F1C;
+    --muted: #646B66;
+    --line: #DCE0D9;
+    --pick: #E2711D;
+    --saved: #2E7D4F;
+    --fav: #C8323C;
+    --other: #4E6A8C;
+    --star: #E5A400;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 48px 20px 64px; }
+  .icon { width: 88px; height: 88px; border-radius: 20px; display: block; }
+  h1 {
+    font-family: "Bricolage Grotesque", -apple-system, sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 7vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 20px 0 12px;
+  }
+  .lede { font-size: 20px; line-height: 1.45; margin: 0 0 8px; }
+  .note { color: var(--muted); margin: 0 0 40px; }
+  h2 {
+    font-family: "Bricolage Grotesque", -apple-system, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 48px 0 16px;
+  }
+  .features { list-style: none; margin: 0; padding: 0; }
+  .features li {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+  }
+  .features li:last-child { border-bottom: 1px solid var(--line); }
+  .dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 7px; }
+  .features b { display: block; }
+  .features span { color: var(--muted); }
+  .install {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 24px 24px 8px;
+    margin-top: 16px;
+  }
+  .install ol { margin: 0; padding-left: 22px; }
+  .install li { margin-bottom: 14px; padding-left: 4px; }
+  .button {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 22px;
+    border-radius: 999px;
+    margin: 4px 0 2px;
+  }
+  .button:hover { background: #333a36; }
+  a { color: var(--ink); }
+  a:focus-visible, .button:focus-visible { outline: 3px solid var(--pick); outline-offset: 3px; }
+  .feedback p { margin: 0 0 12px; }
+  footer { margin-top: 56px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon.png" alt="Nosh Next app icon" width="88" height="88">
+  <h1>Nosh Next</h1>
+  <p class="lede">Finds restaurants that match your taste, near wherever you are.</p>
+  <p class="note">iPhone only for now. It's in beta on TestFlight.</p>
+
+  <h2>What it does</h2>
+  <ul class="features">
+    <li><i class="dot" style="background:var(--fav)"></i><div><b>It learns what you like.</b><span>Start with a few favorite places, and it builds a picture of your taste from them.</span></div></li>
+    <li><i class="dot" style="background:var(--pick)"></i><div><b>Discover.</b><span>Suggestions near you, ranked against your taste, each with a short reason.</span></div></li>
+    <li><i class="dot" style="background:var(--other)"></i><div><b>Save from anywhere.</b><span>Share a link, a post, a screenshot or a photo of a storefront to Nosh Next, and it finds the place.</span></div></li>
+    <li><i class="dot" style="background:var(--saved)"></i><div><b>Your lists on a map.</b><span>Want to go and Favorites, with what's open now.</span></div></li>
+    <li><i class="dot" style="background:var(--star)"></i><div><b>Log visits.</b><span>Add photos, a note, the bill (it reads the receipt) and a rating if you want one.</span></div></li>
+    <li><i class="dot" style="background:var(--ink)"></i><div><b>Diets are rules.</b><span>Vegetarian, vegan or gluten-free: places that don't fit are left out, not just ranked lower.</span></div></li>
+  </ul>
+
+  <h2>Install it</h2>
+  <div class="install">
+    <ol>
+      <li>Install <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> from the App Store.</li>
+      <li>On your iPhone, open the invite:<br><a class="button" href="https://testflight.apple.com/join/2KzyGjgG">Join the Nosh Next beta</a></li>
+      <li>Tap Accept, then Install.</li>
+      <li>Open Nosh Next and sign in with your email. It sends you a code. If it doesn't arrive in a minute, check your spam folder.</li>
+    </ol>
+  </div>
+
+  <h2>Tell me what you think</h2>
+  <div class="feedback">
+    <p>Good or bad, I want to hear it. Problems, confusing moments and ideas are all useful.</p>
+    <p>If you know me, message me directly. Or take a screenshot in the app and tap Share Beta Feedback; it comes straight to me.</p>
+  </div>
+
+  <footer>Nosh Next is made by Martin Strell.</footer>
+</main>
+</body>
+</html>
