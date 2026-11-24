@@ -94,13 +94,10 @@
   .get { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 0 0 40px; }
   .get .button { margin: 0; }
   .get span { color: var(--muted); }
-  .shots {
-    display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
-    margin: 0 -20px; padding: 4px 20px 12px; -webkit-overflow-scrolling: touch;
-  }
-  .shots figure { flex: 0 0 200px; margin: 0; scroll-snap-align: start; }
+  .shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 0 0 8px; }
+  .shots figure { margin: 0; min-width: 0; }
   .shots img {
-    width: 200px; height: auto; display: block; border-radius: 18px;
+    width: 100%; height: auto; display: block; border-radius: 16px;
     border: 1px solid var(--line); background: var(--card);
   }
   .shots figcaption { color: var(--muted); font-size: 14px; line-height: 1.4; margin-top: 8px; }
@@ -118,10 +115,9 @@
   </div>
 
   <div class="shots" aria-label="Screenshots">
-    <figure><img src="shots/list.webp" alt="Near Me list with suggestions and the reason for each" width="200" height="433" loading="lazy"><figcaption>Suggestions near you, each with a reason.</figcaption></figure>
-    <figure><img src="shots/map.webp" alt="Map of favorites, want to go and suggested places" width="200" height="433" loading="lazy"><figcaption>Your places and suggestions on one map.</figcaption></figure>
-    <figure><img src="shots/photo.webp" alt="Adding a place from a photo of a restaurant's entrance" width="200" height="433" loading="lazy"><figcaption>Snap a storefront and it finds the place.</figcaption></figure>
-    <figure><img src="shots/bill.webp" alt="A logged visit with dishes read from the bill" width="200" height="433" loading="lazy"><figcaption>Photograph the bill and it lists what you had.</figcaption></figure>
+    <figure><img src="shots/list.webp" alt="Near Me list with suggestions and the reason for each" width="600" height="1299" loading="lazy"><figcaption>Suggestions near you, each with a reason.</figcaption></figure>
+    <figure><img src="shots/photo.webp" alt="Adding a place from a photo of a restaurant's entrance" width="600" height="1299" loading="lazy"><figcaption>Snap a storefront and it finds the place.</figcaption></figure>
+    <figure><img src="shots/bill.webp" alt="A logged visit with dishes read from the bill" width="600" height="1299" loading="lazy"><figcaption>Photograph the bill and it lists what you had.</figcaption></figure>
   </div>
 
   <h2>What it does</h2>
