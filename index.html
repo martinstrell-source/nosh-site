@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nosh Next</title>
-<meta name="description" content="Nosh Next finds restaurants that match your taste, near wherever you are. iPhone beta on TestFlight.">
+<meta name="description" content="Nosh Next finds restaurants that match your taste, near wherever you are. Free on the App Store for iPhone.">
 <link rel="icon" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,6 +83,19 @@
   a { color: var(--ink); }
   a:focus-visible, .button:focus-visible { outline: 3px solid var(--pick); outline-offset: 3px; }
   .feedback p { margin: 0 0 12px; }
+  .get { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 0 0 40px; }
+  .get .button { margin: 0; }
+  .get span { color: var(--muted); }
+  .shots {
+    display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin: 0 -20px; padding: 4px 20px 12px; -webkit-overflow-scrolling: touch;
+  }
+  .shots figure { flex: 0 0 200px; margin: 0; scroll-snap-align: start; }
+  .shots img {
+    width: 200px; height: auto; display: block; border-radius: 18px;
+    border: 1px solid var(--line); background: var(--card);
+  }
+  .shots figcaption { color: var(--muted); font-size: 14px; line-height: 1.4; margin-top: 8px; }
   footer { margin-top: 56px; color: var(--muted); font-size: 14px; }
 </style>
 </head>
@@ -91,7 +104,17 @@
   <img class="icon" src="icon.png" alt="Nosh Next app icon" width="88" height="88">
   <h1>Nosh Next</h1>
   <p class="lede">Finds restaurants that match your taste, near wherever you are.</p>
-  <p class="note">iPhone only for now. It's in beta on TestFlight.</p>
+  <div class="get">
+    <a class="button" href="https://apps.apple.com/app/id6828563437">Download on the App Store</a>
+    <span>Free, no ads. iPhone now; Android is in testing.</span>
+  </div>
+
+  <div class="shots" aria-label="Screenshots">
+    <figure><img src="shots/list.webp" alt="Near Me list with suggestions and the reason for each" width="200" height="433" loading="lazy"><figcaption>Suggestions near you, each with a reason.</figcaption></figure>
+    <figure><img src="shots/map.webp" alt="Map of favorites, want to go and suggested places" width="200" height="433" loading="lazy"><figcaption>Your places and suggestions on one map.</figcaption></figure>
+    <figure><img src="shots/photo.webp" alt="Adding a place from a photo of a restaurant's entrance" width="200" height="433" loading="lazy"><figcaption>Snap a storefront and it finds the place.</figcaption></figure>
+    <figure><img src="shots/bill.webp" alt="A logged visit with dishes read from the bill" width="200" height="433" loading="lazy"><figcaption>Photograph the bill and it lists what you had.</figcaption></figure>
+  </div>
 
   <h2>What it does</h2>
   <ul class="features">
@@ -103,20 +126,19 @@
     <li><i class="dot" style="background:var(--ink)"></i><div><b>Diets are rules.</b><span>Vegetarian, vegan or gluten-free: places that don't fit are left out, not just ranked lower.</span></div></li>
   </ul>
 
-  <h2>Install it</h2>
+  <h2>Get it</h2>
   <div class="install">
     <ol>
-      <li>Install <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a> from the App Store.</li>
-      <li>On your iPhone, open the invite:<br><a class="button" href="https://testflight.apple.com/join/2KzyGjgG">Join the Nosh Next beta</a></li>
-      <li>Tap Accept, then Install.</li>
-      <li>Open Nosh Next and sign in with your email. It sends you a code. If it doesn't arrive in a minute, check your spam folder.</li>
+      <li>On your iPhone:<br><a class="button" href="https://apps.apple.com/app/id6828563437">Download on the App Store</a></li>
+      <li>Open Nosh Next and sign in with Apple, Google or your email. Email sign-in sends you a code; if it doesn't arrive in a minute, check your spam folder.</li>
+      <li>On Android: the app is in a closed test on Google Play. To join, email <a href="mailto:martin.strell@gmail.com?subject=Nosh%20Next%20Android">martin.strell@gmail.com</a> with your Google account address.</li>
     </ol>
   </div>
 
   <h2>Tell me what you think</h2>
   <div class="feedback">
     <p>Good or bad, I want to hear it. Problems, confusing moments and ideas are all useful.</p>
-    <p>If you know me, message me directly. Or take a screenshot in the app and tap Share Beta Feedback; it comes straight to me.</p>
+    <p>If you know me, message me directly. Otherwise, email <a href="mailto:martin.strell@gmail.com">martin.strell@gmail.com</a>.</p>
   </div>
 
   <footer>Nosh Next is made by Martin Strell. <a href="privacy/" style="color: inherit">Privacy</a> · <a href="support/" style="color: inherit">Support</a></footer>
